@@ -1,5 +1,7 @@
 <?php
 
+//die($_SERVER['REQUEST_URI']);//Esta funcion imprime la url que solicito en el buscador  
+
 /**
  * Laravel - A PHP Framework For Web Artisans
  *

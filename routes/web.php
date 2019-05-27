@@ -11,10 +11,17 @@
 |
 */
 
-Route::post('/guardar','clientesCotroller@guardar');
+Route::get('/hola', 'usuarioController@index');
 
-Route::get('/Registro','clientesCotroller@registro');
-
-Route::get('/guardar', function () {
-    return view('welcome');
+Route::get('/Cadena/De/La/Ruta', function () {
+    return "CadenaDeLaRuta";
 });
+
+Route::get('/Usuario/{id}/{cuenta}/{clave}','usuarioController@usuarioDetalle')
+->where('id','[0-9]');
+
+Route::get('/nuevoU','usuarioController@nuevoUsuario');
+
+Route::get('/inicioS','usuarioController@inicioSesion');
+
+Route::get('/User/{id}/{cuenta}/{clave}/{estado?}','usuarioController@verificarRegistro');
